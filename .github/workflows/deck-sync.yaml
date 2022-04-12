@@ -14,7 +14,7 @@ jobs:
           deck-version: "1.11.0"
       - name: clone repo
         uses: actions/checkout@v2
-      - name: Run decK deck-sync
+      - name: Run decK deck-diff
         env:
           DECK_KONNECT_EMAIL: ${{ secrets.DECK_EMAIL }}
           DECK_KONNECT_PASSWORD: ${{ secrets.DECK_PASS }}
