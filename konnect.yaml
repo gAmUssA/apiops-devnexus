@@ -6,7 +6,7 @@ service_packages:
   - document:
       path: devnexus-api-v1.0.yaml
       published: true
-  - implementation:
+    implementation:
       kong:
         service:
           host: apiops.kongproxy.me
