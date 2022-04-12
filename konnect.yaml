@@ -1,0 +1,42 @@
+_format_version: "1.1"
+service_packages:
+- description: placeholder description for Devnexus_APIOps_Workshop service package
+  name: Devnexus_APIOps_Workshop
+  versions:
+  - implementation:
+      kong:
+        service:
+          host: apiops.kongproxy.me
+          id: 9bec0d33-f4a3-4dbe-b4e9-c909e556d594
+          path: /
+          port: 443
+          protocol: https
+          routes:
+          - methods:
+            - GET
+            name: Devnexus_APIOps_Workshop-listSessions
+            paths:
+            - /sessions$
+            strip_path: false
+            tags:
+            - OAS3_import
+          - methods:
+            - GET
+            name: Devnexus_APIOps_Workshop-getSession
+            paths:
+            - /sessions/(?<id>[^\/]+)$
+            strip_path: false
+            tags:
+            - OAS3_import
+          - methods:
+            - GET
+            name: Devnexus_APIOps_Workshop-list_products
+            paths:
+            - /products$
+            strip_path: false
+            tags:
+            - OAS3_import
+          tags:
+          - OAS3_import
+      type: kong-gateway
+    version: v1
