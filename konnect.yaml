@@ -22,7 +22,7 @@ service_packages:
                 minute: 5
                 policy: local
             - name: mocking
-              enabled: true
+              enabled: false
               protocols:
                 - http
               config:
